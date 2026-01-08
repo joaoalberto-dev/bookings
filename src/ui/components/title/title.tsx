@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
 
-type TitleProps = {
+interface TitleProps {
   children: ReactNode;
-};
+}
 
 export const Title = ({ children }: TitleProps) => {
   if (!children) return null;
