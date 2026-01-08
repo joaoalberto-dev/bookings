@@ -1,3 +1,5 @@
+[![CI](https://github.com/joaoalberto-dev/bookings/actions/workflows/ci.yml/badge.svg)](https://github.com/joaoalberto-dev/bookings/actions/workflows/ci.yml)
+
 # Bookings
 
 This project is the implementation of the `React Technical Test` for the Bookings application.
