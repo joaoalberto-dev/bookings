@@ -15,9 +15,10 @@ This project is the implementation of the `React Technical Test` for the Booking
 - React (with compiler)
 - Vitest
 
-### Linting
+### Linting and formatting
 
 - ESLint
+- Prettier
 
 ## Scripts
 
@@ -28,3 +29,5 @@ This project is the implementation of the `React Technical Test` for the Booking
 - `coverage`: `pnpm coverage` Generate test coverage report
 - `lint`: `pnpm lint` Lint the project
 - `lint:fix`: `pnpm lint:fix` Lint and fix the project
+- `format`: `pnpm format` Format the project
+- `format:check`: `pnpm format:check` Check if the project is formatted
