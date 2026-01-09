@@ -40,7 +40,7 @@ My reasoning to solve this challange is split the solution in small blocks of de
 
 - [x] Environment with the tooling required to speedup the development with confidence.
 - [x] Define the architecure required to achieve scalabilty and reliability.
-- [ ] Specify and refine the domains necessaries to achieve the requirements.
+- [x] Specify and refine the domains necessaries to achieve the requirements.
 - [ ] Build the data management layer (state, validations, error handling) without focusing in the UI
 - [ ] Build the UI around the defined data layer focusing in the UX
 - [ ] Polish the UI and iterate over the UX
