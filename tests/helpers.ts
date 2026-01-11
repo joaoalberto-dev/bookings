@@ -31,8 +31,9 @@ export const mockFetchWithResolve = () => {
     resolve: (
       response: Partial<Response> = {
         ok: true,
+        // eslint-disable-next-line @typescript-eslint/require-await -- Tests only
         json: async () => {
-          // Noop
+          return {};
         },
       },
     ) => {
