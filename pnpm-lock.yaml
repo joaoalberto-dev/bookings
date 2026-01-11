@@ -7,6 +7,9 @@ settings:
 importers:
   .:
     dependencies:
+      arktype:
+        specifier: ^2.1.29
+        version: 2.1.29
       react:
         specifier: ^19.2.0
         version: 19.2.3
@@ -92,6 +95,9 @@ importers:
       vitest:
         specifier: ^4.0.16
         version: 4.0.16(@types/node@24.10.4)(jsdom@27.4.0)(yaml@2.8.2)
+      zustand:
+        specifier: ^5.0.9
+        version: 5.0.9(@types/react@19.2.7)(react@19.2.3)
 
 packages:
   "@acemir/cssom@0.9.30":
@@ -101,6 +107,14 @@ packages:
   "@adobe/css-tools@4.4.4":
     resolution:
       { integrity: sha512-Elp+iwUx5rN5+Y8xLt5/GRoG20WGoDCQ/1Fb+1LiGtvwbDavuSk0jhD/eZdckHAuzcDzccnkv+rEjyWfRx18gg== }
+
+  "@ark/schema@0.56.0":
+    resolution:
+      { integrity: sha512-ECg3hox/6Z/nLajxXqNhgPtNdHWC9zNsDyskwO28WinoFEnWow4IsERNz9AnXRhTZJnYIlAJ4uGn3nlLk65vZA== }
+
+  "@ark/util@0.56.0":
+    resolution:
+      { integrity: sha512-BghfRC8b9pNs3vBoDJhcta0/c1J1rsoS1+HgVUreMFPdhz/CRAKReAu57YEllNaSy98rWAdY1gE+gFup7OXpgA== }
 
   "@asamuzakjp/css-color@4.1.1":
     resolution:
@@ -1007,6 +1021,14 @@ packages:
     resolution:
       { integrity: sha512-COROpnaoap1E2F000S62r6A60uHZnmlvomhfyT2DlTcrY1OrBKn2UhH7qn5wTC9zMvD0AY7csdPSNwKP+7WiQw== }
     engines: { node: ">= 0.4" }
+
+  arkregex@0.0.5:
+    resolution:
+      { integrity: sha512-ncYjBdLlh5/QnVsAA8De16Tc9EqmYM7y/WU9j+236KcyYNUXogpz3sC4ATIZYzzLxwI+0sEOaQLEmLmRleaEXw== }
+
+  arktype@2.1.29:
+    resolution:
+      { integrity: sha512-jyfKk4xIOzvYNayqnD8ZJQqOwcrTOUbIU4293yrzAjA3O1dWh61j71ArMQ6tS/u4pD7vabSPe7nG3RCyoXW6RQ== }
 
   assertion-error@2.0.1:
     resolution:
@@ -2176,10 +2198,35 @@ packages:
     resolution:
       { integrity: sha512-k7Nwx6vuWx1IJ9Bjuf4Zt1PEllcwe7cls3VNzm4CQ1/hgtFUK2bRNG3rvnpPUhFjmqJKAKtjV576KnUkHocg/g== }
 
+  zustand@5.0.9:
+    resolution:
+      { integrity: sha512-ALBtUj0AfjJt3uNRQoL1tL2tMvj6Gp/6e39dnfT6uzpelGru8v1tPOGBzayOWbPJvujM8JojDk3E1LxeFisBNg== }
+    engines: { node: ">=12.20.0" }
+    peerDependencies:
+      "@types/react": ">=18.0.0"
+      immer: ">=9.0.6"
+      react: ">=18.0.0"
+      use-sync-external-store: ">=1.2.0"
+    peerDependenciesMeta:
+      "@types/react":
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+      use-sync-external-store:
+        optional: true
+
 snapshots:
   "@acemir/cssom@0.9.30": {}
 
   "@adobe/css-tools@4.4.4": {}
+
+  "@ark/schema@0.56.0":
+    dependencies:
+      "@ark/util": 0.56.0
+
+  "@ark/util@0.56.0": {}
 
   "@asamuzakjp/css-color@4.1.1":
     dependencies:
@@ -2903,6 +2950,16 @@ snapshots:
       dequal: 2.0.3
 
   aria-query@5.3.2: {}
+
+  arkregex@0.0.5:
+    dependencies:
+      "@ark/util": 0.56.0
+
+  arktype@2.1.29:
+    dependencies:
+      "@ark/schema": 0.56.0
+      "@ark/util": 0.56.0
+      arkregex: 0.0.5
 
   assertion-error@2.0.1: {}
 
@@ -3829,3 +3886,8 @@ snapshots:
       zod: 4.3.5
 
   zod@4.3.5: {}
+
+  zustand@5.0.9(@types/react@19.2.7)(react@19.2.3):
+    optionalDependencies:
+      "@types/react": 19.2.7
+      react: 19.2.3
