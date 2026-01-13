@@ -18,7 +18,7 @@ export const mockFetchErrorThrow = (error?: Error) => {
   vi.mocked(fetch).mockRejectedValueOnce(error);
 };
 
-export const mockFetchWithResolve = () => {
+export const mockFetchWithResolve = (data: unknown) => {
   let resolve: (response: Partial<Response>) => void;
 
   const pendingPromise = new Promise<Response>((res) => {
@@ -33,7 +33,7 @@ export const mockFetchWithResolve = () => {
         ok: true,
         // eslint-disable-next-line @typescript-eslint/require-await -- Tests only
         json: async () => {
-          return {};
+          return data;
         },
       },
     ) => {
