@@ -186,6 +186,10 @@ const mockData: Record<"properties", Property[]> = {
       cover: "/properties/images/0f1d9e7a-7c3e-4e5a-9b3f-9b9e0c8d1a01.png",
       day_price: 18000,
       currency: "USD",
+      location: {
+        city: "New York",
+        country: "United States",
+      },
     },
     {
       id: "1a2b3c4d-1111-4f2a-9d2e-2e1f9a0b0002",
@@ -195,6 +199,10 @@ const mockData: Record<"properties", Property[]> = {
       cover: "/properties/images/1a2b3c4d-1111-4f2a-9d2e-2e1f9a0b0002.png",
       day_price: 22000,
       currency: "USD",
+      location: {
+        city: "New York",
+        country: "United States",
+      },
     },
   ],
 };

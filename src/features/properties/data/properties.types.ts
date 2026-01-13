@@ -1,6 +1,6 @@
 import { type } from "arktype";
 
-import { currency } from "@/types";
+import { currency, location } from "@/types";
 
 export const property = type({
   id: "string.uuid",
@@ -9,6 +9,7 @@ export const property = type({
   cover: "string",
   day_price: "number.integer>0",
   currency: currency,
+  location: location,
 });
 
 export const propertyResponse = type({
