@@ -11,8 +11,15 @@ describe("Title", () => {
     expect(title).toHaveTextContent("Test Title");
   });
 
-  test("should return null when no children is provided", () => {
+  test("should return null when null children is provided", () => {
     render(<Title children={null} />);
+
+    expect(screen.queryByRole("heading")).not.toBeInTheDocument();
+  });
+
+  test("should return null when no children is provided", () => {
+    // @ts-expect-error -- Tests only
+    render(<Title />);
 
     expect(screen.queryByRole("heading")).not.toBeInTheDocument();
   });
