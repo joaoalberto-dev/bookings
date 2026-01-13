@@ -82,6 +82,10 @@ This domain is very simple and will be responsible to handle the properties list
     cover: string,        // A single image to be used as cover
     day_price: number,    // Daily price in cents
     currency: 'USD'       // ISO 4217 ref.: https://www.iban.com/currency-codes
+    location: {           // Location details
+        city: string,
+        country: string
+    }
 }
 
 // Example fake request
@@ -92,7 +96,12 @@ This domain is very simple and will be responsible to handle the properties list
         name: 'Stuning house by the sea'
         description: 'This stunning house by the sea offers a calm and welcoming retreat where comfort and nature are seamlessly connected. Large windows fill the interior with natural light and frame uninterrupted ocean views, while soft, neutral tones and natural materials create a warm, relaxing atmosphere throughout the home. The open-plan living area invites quiet mornings and cozy evenings, with spaces designed for both rest and togetherness.\n\nThe kitchen and dining area flow naturally toward an outdoor terrace, making it easy to enjoy meals with the sound of the waves in the background. Bedrooms are peaceful and intimate, designed as private sanctuaries with gentle lighting and views of the water. Outdoors, a spacious deck extends the living space, perfect for relaxing during the day or enjoying the sunset in the evening.\n\nAmenities:\n\nOcean-facing terrace and wooden deck\n\nLarge panoramic windows\n\nCozy fireplace in the living area\n\nFully equipped open-plan kitchen\n\nOutdoor dining and seating area\n\nFire pit for evening gatherings\n\nOutdoor shower for post-beach comfort\n\nSmart lighting and climate control\n\nReading nook and relaxation spaces'
         cover: 'https://cdn.url.com/properties/3aa5fc6b-c472-42e4-8cc2-652e44ba800d.png'
-        day_price: 30_000
+        day_price: 30_000,
+        currency: 'USD',
+        location: {
+            city: "Aspen",
+            country: "United States"
+        }
     }
 ]
 ```
