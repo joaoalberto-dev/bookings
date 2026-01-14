@@ -4,7 +4,7 @@
       "id": "a1b1c1d1-0001-4a1a-9b1b-111111111111",
       "name": "Modern loft in downtown",
       "description": "A stylish loft with open spaces and contemporary design, ideal for short and long stays.\n\nAmenities:\n\nOpen-plan living area\n\nHigh-speed Wi-Fi\n\nEquipped kitchen\n\nWorkspace",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0001.png",
+      "cover": "/properties/images/1.jpg",
       "day_price": 18000,
       "currency": "USD",
       "location": {
@@ -16,7 +16,7 @@
       "id": "a1b1c1d1-0002-4a1a-9b1b-222222222222",
       "name": "Cozy mountain cabin",
       "description": "A wooden cabin surrounded by mountains and nature, perfect for a peaceful retreat.\n\nAmenities:\n\nFireplace\n\nMountain views\n\nHeating\n\nKitchen",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0002.png",
+      "cover": "/properties/images/2.jpg",
       "day_price": 22000,
       "currency": "USD",
       "location": {
@@ -28,7 +28,7 @@
       "id": "a1b1c1d1-0003-4a1a-9b1b-333333333333",
       "name": "Beachfront bungalow",
       "description": "A relaxed beachfront bungalow with direct access to the sand and ocean views.\n\nAmenities:\n\nBeach access\n\nOutdoor seating\n\nAir conditioning\n\nKitchenette",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0003.png",
+      "cover": "/properties/images/3.jpg",
       "day_price": 26000,
       "currency": "USD",
       "location": {
@@ -40,7 +40,7 @@
       "id": "a1b1c1d1-0004-4a1a-9b1b-444444444444",
       "name": "Urban studio apartment",
       "description": "A compact studio near public transport and city attractions.\n\nAmenities:\n\nWi-Fi\n\nSmart TV\n\nCompact kitchen\n\nWasher",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0004.png",
+      "cover": "/properties/images/4.jpg",
       "day_price": 15000,
       "currency": "USD",
       "location": {
@@ -52,7 +52,7 @@
       "id": "a1b1c1d1-0005-4a1a-9b1b-555555555555",
       "name": "Luxury city penthouse",
       "description": "An upscale penthouse with panoramic city views and premium finishes.\n\nAmenities:\n\nPrivate terrace\n\nJacuzzi\n\nGourmet kitchen",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0005.png",
+      "cover": "/properties/images/5.jpg",
       "day_price": 45000,
       "currency": "USD",
       "location": {
@@ -64,7 +64,7 @@
       "id": "a1b1c1d1-0006-4a1a-9b1b-666666666666",
       "name": "Quiet suburban house",
       "description": "A spacious home in a calm suburban area, ideal for families.\n\nAmenities:\n\nBackyard\n\nGarage\n\nLaundry room",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0006.png",
+      "cover": "/properties/images/6.jpg",
       "day_price": 24000,
       "currency": "USD",
       "location": {
@@ -76,7 +76,7 @@
       "id": "a1b1c1d1-0007-4a1a-9b1b-777777777777",
       "name": "Historic town apartment",
       "description": "An apartment in a historic building with classic charm and modern comfort.\n\nAmenities:\n\nHigh ceilings\n\nModern bathroom\n\nCentral location",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0007.png",
+      "cover": "/properties/images/7.jpg",
       "day_price": 20000,
       "currency": "USD",
       "location": {
@@ -88,7 +88,7 @@
       "id": "a1b1c1d1-0008-4a1a-9b1b-888888888888",
       "name": "Lakeview retreat",
       "description": "A calm retreat overlooking the lake, perfect for nature lovers.\n\nAmenities:\n\nLake-facing deck\n\nFire pit\n\nHeating",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0008.png",
+      "cover": "/properties/images/8.jpg",
       "day_price": 27000,
       "currency": "USD",
       "location": {
@@ -100,7 +100,7 @@
       "id": "a1b1c1d1-0009-4a1a-9b1b-999999999999",
       "name": "Minimalist city flat",
       "description": "A minimalist flat close to shops, cafes, and public transport.\n\nAmenities:\n\nFast internet\n\nSmart TV\n\nElevator",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0009.png",
+      "cover": "/properties/images/9.jpg",
       "day_price": 17000,
       "currency": "USD",
       "location": {
@@ -112,7 +112,7 @@
       "id": "a1b1c1d1-0010-4a1a-9b1b-aaaaaaaaaaaa",
       "name": "Countryside farmhouse",
       "description": "A traditional farmhouse surrounded by open fields and nature.\n\nAmenities:\n\nGarden\n\nFireplace\n\nParking",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0010.png",
+      "cover": "/properties/images/10.jpg",
       "day_price": 21000,
       "currency": "USD",
       "location": {
@@ -124,7 +124,7 @@
       "id": "a1b1c1d1-0011-4a1a-9b1b-bbbbbbbbbbbb",
       "name": "Seaside apartment",
       "description": "A bright apartment near the beach with partial ocean views.\n\nAmenities:\n\nBalcony\n\nAir conditioning\n\nWi-Fi",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0011.png",
+      "cover": "/properties/images/11.jpg",
       "day_price": 23000,
       "currency": "USD",
       "location": {
@@ -136,7 +136,7 @@
       "id": "a1b1c1d1-0012-4a1a-9b1b-cccccccccccc",
       "name": "Business travel suite",
       "description": "A practical suite designed for business travelers.\n\nAmenities:\n\nDesk\n\nHigh-speed internet\n\nCoffee machine",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0012.png",
+      "cover": "/properties/images/12.jpg",
       "day_price": 19000,
       "currency": "USD",
       "location": {
@@ -148,7 +148,7 @@
       "id": "a1b1c1d1-0013-4a1a-9b1b-dddddddddddd",
       "name": "Family-friendly villa",
       "description": "A spacious villa suitable for families and longer stays.\n\nAmenities:\n\nSwimming pool\n\nGarden\n\nMultiple bedrooms",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0013.png",
+      "cover": "/properties/images/13.jpg",
       "day_price": 38000,
       "currency": "USD",
       "location": {
@@ -160,7 +160,7 @@
       "id": "a1b1c1d1-0014-4a1a-9b1b-eeeeeeeeeeee",
       "name": "Riverside cottage",
       "description": "A cozy cottage by the river with peaceful surroundings.\n\nAmenities:\n\nRiver views\n\nFireplace\n\nOutdoor seating",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0014.png",
+      "cover": "/properties/images/14.jpg",
       "day_price": 25000,
       "currency": "USD",
       "location": {
@@ -172,7 +172,7 @@
       "id": "a1b1c1d1-0015-4a1a-9b1b-ffffffffffff",
       "name": "Eco-friendly tiny house",
       "description": "A compact eco-friendly house focused on sustainable living.\n\nAmenities:\n\nSolar power\n\nEfficient insulation\n\nDeck",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0015.png",
+      "cover": "/properties/images/15.jpg",
       "day_price": 16000,
       "currency": "USD",
       "location": {
@@ -184,7 +184,7 @@
       "id": "a1b1c1d1-0016-4a1a-9b1b-121212121212",
       "name": "Hilltop panoramic house",
       "description": "A hilltop house with wide panoramic views of the surroundings.\n\nAmenities:\n\nTerrace\n\nFireplace\n\nPrivate parking",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0016.png",
+      "cover": "/properties/images/16.jpg",
       "day_price": 34000,
       "currency": "USD",
       "location": {
@@ -196,7 +196,7 @@
       "id": "a1b1c1d1-0017-4a1a-9b1b-131313131313",
       "name": "Chic studio near metro",
       "description": "A stylish studio with excellent public transport access.\n\nAmenities:\n\nMetro nearby\n\nWi-Fi\n\nKitchenette",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0017.png",
+      "cover": "/properties/images/17.jpg",
       "day_price": 16500,
       "currency": "USD",
       "location": {
@@ -208,7 +208,7 @@
       "id": "a1b1c1d1-0018-4a1a-9b1b-141414141414",
       "name": "Desert modern retreat",
       "description": "A modern retreat blending architecture with desert landscapes.\n\nAmenities:\n\nInfinity pool\n\nShaded patio\n\nAir conditioning",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0018.png",
+      "cover": "/properties/images/18.jpg",
       "day_price": 36000,
       "currency": "USD",
       "location": {
@@ -220,7 +220,7 @@
       "id": "a1b1c1d1-0019-4a1a-9b1b-151515151515",
       "name": "Forest lodge",
       "description": "A rustic lodge surrounded by forest and hiking trails.\n\nAmenities:\n\nWood stove\n\nParking\n\nHeating",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0019.png",
+      "cover": "/properties/images/19.jpg",
       "day_price": 23000,
       "currency": "USD",
       "location": {
@@ -232,7 +232,7 @@
       "id": "a1b1c1d1-0020-4a1a-9b1b-161616161616",
       "name": "Cliffside ocean house",
       "description": "A cliffside house with uninterrupted ocean views.\n\nAmenities:\n\nInfinity terrace\n\nOcean views\n\nModern kitchen",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0020.png",
+      "cover": "/properties/images/20.jpg",
       "day_price": 42000,
       "currency": "USD",
       "location": {
@@ -244,7 +244,7 @@
       "id": "a1b1c1d1-0021-4a1a-9b1b-171717171717",
       "name": "Budget city room",
       "description": "An affordable room in a central location.\n\nAmenities:\n\nWi-Fi\n\nShared kitchen\n\nHeating",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0021.png",
+      "cover": "/properties/images/21.jpg",
       "day_price": 9000,
       "currency": "USD",
       "location": {
@@ -256,7 +256,7 @@
       "id": "a1b1c1d1-0022-4a1a-9b1b-181818181818",
       "name": "Artistic loft",
       "description": "A creative loft space with artistic decor and open layout.\n\nAmenities:\n\nCreative lighting\n\nWorkspace\n\nWi-Fi",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0022.png",
+      "cover": "/properties/images/22.jpg",
       "day_price": 21000,
       "currency": "USD",
       "location": {
@@ -268,7 +268,7 @@
       "id": "a1b1c1d1-0023-4a1a-9b1b-191919191919",
       "name": "Snowy mountain chalet",
       "description": "A cozy chalet near ski slopes, ideal for winter holidays.\n\nAmenities:\n\nSki storage\n\nFireplace\n\nHeating",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0023.png",
+      "cover": "/properties/images/23.jpg",
       "day_price": 29000,
       "currency": "USD",
       "location": {
@@ -280,7 +280,7 @@
       "id": "a1b1c1d1-0024-4a1a-9b1b-202020202020",
       "name": "Garden studio",
       "description": "A peaceful studio with direct access to a private garden.\n\nAmenities:\n\nPrivate garden\n\nWi-Fi\n\nOutdoor seating",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0024.png",
+      "cover": "/properties/images/24.jpg",
       "day_price": 17500,
       "currency": "USD",
       "location": {
@@ -292,7 +292,7 @@
       "id": "a1b1c1d1-0025-4a1a-9b1b-212121212121",
       "name": "Harbor view apartment",
       "description": "An apartment overlooking the harbor with a private balcony.\n\nAmenities:\n\nHarbor views\n\nBalcony\n\nElevator",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0025.png",
+      "cover": "/properties/images/25.jpg",
       "day_price": 25500,
       "currency": "USD",
       "location": {
@@ -304,7 +304,7 @@
       "id": "a1b1c1d1-0026-4a1a-9b1b-222222222223",
       "name": "Remote island hut",
       "description": "A simple off-grid hut on a remote island.\n\nAmenities:\n\nSolar electricity\n\nOutdoor shower\n\nSecluded area",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0026.png",
+      "cover": "/properties/images/26.jpg",
       "day_price": 20000,
       "currency": "USD",
       "location": {
@@ -316,7 +316,7 @@
       "id": "a1b1c1d1-0027-4a1a-9b1b-232323232323",
       "name": "Elegant townhouse",
       "description": "An elegant townhouse with refined interiors and central location.\n\nAmenities:\n\nMultiple floors\n\nLaundry\n\nWi-Fi",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0027.png",
+      "cover": "/properties/images/27.jpg",
       "day_price": 32000,
       "currency": "USD",
       "location": {
@@ -328,7 +328,7 @@
       "id": "a1b1c1d1-0028-4a1a-9b1b-242424242424",
       "name": "City center flat",
       "description": "A comfortable flat located in the heart of the city.\n\nAmenities:\n\nWi-Fi\n\nEquipped kitchen\n\nPublic transport nearby",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0028.png",
+      "cover": "/properties/images/28.jpg",
       "day_price": 18500,
       "currency": "USD",
       "location": {
@@ -340,7 +340,7 @@
       "id": "a1b1c1d1-0029-4a1a-9b1b-252525252525",
       "name": "Tropical garden villa",
       "description": "A villa surrounded by tropical gardens, offering privacy and comfort.\n\nAmenities:\n\nSwimming pool\n\nGarden\n\nOutdoor dining",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0029.png",
+      "cover": "/properties/images/29.jpg",
       "day_price": 35000,
       "currency": "USD",
       "location": {
@@ -352,7 +352,7 @@
       "id": "a1b1c1d1-0030-4a1a-9b1b-262626262626",
       "name": "Central business apartment",
       "description": "A modern apartment ideal for professionals working in the city center.\n\nAmenities:\n\nWorkspace\n\nHigh-speed Wi-Fi\n\nSmart TV",
-      "cover": "https://cdn.url.com/properties/a1b1c1d1-0030.png",
+      "cover": "/properties/images/30.jpg",
       "day_price": 20500,
       "currency": "USD",
       "location": {
