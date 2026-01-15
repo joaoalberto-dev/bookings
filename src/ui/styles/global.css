@@ -1,11 +1,32 @@
 :root {
-  --background: #fffff5;
+  /* Colors */
+  --background: #f3f3f3;
   --foreground: #171717;
+  --elevated-background: #fcfcfc;
+  --elevated-foreground: #605959;
+  --border: #dcd9d9;
+  --brand: #2d2aa5;
+  --outline: #6c757d;
+
+  /* Sizes */
+  --sm: 4px;
+  --md: 8px;
+  --lg: 12px;
+  --xl: 16px;
+
+  /* Elevation */
+  --shadow-color: 0deg 0% 78%;
+  --shadow-elevation: 0.3px 0.5px 0.9px hsl(var(--shadow-color) / 0), 0.8px 1.6px 2.7px hsl(var(--shadow-color) / 0.28);
+
+  /* Z-indexes */
+  --z-modal: 10;
+  --z-alerts: 20;
 
   background-color: var(--background);
   color: var(--foreground);
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
+  font-size: 16px;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,9 +34,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0;
   overflow: auto;
   padding: 0;
   width: 100%;
+}
+
+.block-scroll {
+  overflow: hidden;
 }
