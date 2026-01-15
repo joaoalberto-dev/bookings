@@ -6,13 +6,19 @@ export const booking = type({
   id: "string.uuid",
   user_id: "string",
   property_id: "string",
-  start_date: "string.date",
-  end_date: "string.date",
+  start_date: "string.date.iso",
+  end_date: "string.date.iso",
   day_price: "number.integer>0",
-  total_price: "number.integer>0",
   currency,
+}).narrow((data, ctx) => {
+  const start = new Date(data.start_date);
+  const end = new Date(data.end_date);
+
+  if (end <= start) {
+    return ctx.mustBe("a booking where end_date is bigger than start_date");
+  }
+
+  return true;
 });
 
-export const CreateBookingInput = booking.pick("property_id", "start_date", "end_date");
-export const UpdateBookingInput = booking.pick("property_id", "start_date", "end_date");
 export type Booking = typeof booking.infer;
