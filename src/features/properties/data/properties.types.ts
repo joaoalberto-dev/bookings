@@ -12,8 +12,4 @@ export const property = type({
   location: location,
 });
 
-export const propertyResponse = type({
-  properties: property.array(),
-});
-
 export type Property = typeof property.infer;
