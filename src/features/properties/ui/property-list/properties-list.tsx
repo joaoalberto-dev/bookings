@@ -1,4 +1,4 @@
-import { centsToDollar } from "@/utils/to-currency";
+import { toCurrency } from "@/utils/to-currency";
 
 import { useProperties } from "../../data/properties.store";
 import type { Property } from "../../data/properties.types";
@@ -26,7 +26,7 @@ export const PropertiesList = ({ onPropertySelect }: PropertiesListProps) => {
             <S.PropertyTitle>{property.name}</S.PropertyTitle>
           </S.PropertyContent>
           <S.PropertyContent>
-            <S.PropertyPrice>{centsToDollar(property.day_price)} for 1 night</S.PropertyPrice>
+            <S.PropertyPrice>{toCurrency(property.day_price)} for 1 night</S.PropertyPrice>
             <S.PropertyLocation>{property.location.city}</S.PropertyLocation>
           </S.PropertyContent>
         </S.PropertyContainer>
