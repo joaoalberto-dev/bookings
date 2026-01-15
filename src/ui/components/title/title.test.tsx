@@ -11,22 +11,8 @@ describe("Title", () => {
     expect(title).toHaveTextContent("Test Title");
   });
 
-  test("should return null when null children is provided", () => {
-    const { container } = render(<Title>{null}</Title>);
-
-    expect(screen.queryByRole("heading")).not.toBeInTheDocument();
-    expect(container.firstChild).toBeNull();
-  });
-
-  test("should return null when undefined children is provided", () => {
-    const { container } = render(<Title>{undefined}</Title>);
-
-    expect(screen.queryByRole("heading")).not.toBeInTheDocument();
-    expect(container.firstChild).toBeNull();
-  });
-
-  test("should return null when empty string is provided", () => {
-    const { container } = render(<Title>{""}</Title>);
+  test.each([null, undefined, 0, ""])("should return null when %s children is provided", (value) => {
+    const { container } = render(<Title>{value}</Title>);
 
     expect(screen.queryByRole("heading")).not.toBeInTheDocument();
     expect(container.firstChild).toBeNull();
