@@ -8,8 +8,6 @@ describe("BookingModalHeader", () => {
 
     const cover = screen.getByRole("img");
 
-    console.log(cover.attributes);
-
     expect(cover).toBeInTheDocument();
     expect(cover).toHaveAttribute("alt", "Cozy cabin");
   });
