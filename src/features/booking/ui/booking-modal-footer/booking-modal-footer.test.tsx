@@ -108,7 +108,6 @@ describe("BookingModalFooter", () => {
     test("displays formatted date range (same month)", () => {
       render(<BookingModalFooter {...defaultProps} />);
 
-      // The dates will be formatted based on UTC, so Mar 15-20 in UTC
       expect(screen.getByText(/Mar 15-20, 2026/)).toBeInTheDocument();
     });
 

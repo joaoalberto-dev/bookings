@@ -2,7 +2,6 @@ import { styled } from "styled-components";
 
 export const BookingCalendarContainer = styled.div`
   padding: var(--md);
-  padding-bottom: calc(var(--md) * 10);
   margin-top: var(--xl);
 
   .rdp-root,

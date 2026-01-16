@@ -19,7 +19,7 @@ export const ModalContent = styled.div`
   border-radius: var(--xl) var(--xl) 0 0;
   box-shadow: var(--shadow-elevation);
   margin: 0 auto;
-  max-height: 80dvh;
+  max-height: 100dvh;
   max-width: 100%;
   min-height: 400px;
   overflow-x: hidden;

@@ -9,14 +9,9 @@ export const BookingModalFooterContainer = styled.div`
   justify-content: space-between;
   left: 0;
   padding: var(--xl);
-  position: fixed;
   right: 0;
   width: 100%;
   z-index: var(--z-modal);
-
-  @media screen and (min-width: 768px) {
-    position: absolute;
-  }
 `;
 
 export const BookingModalPrice = styled.p`
