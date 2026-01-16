@@ -1,7 +1,7 @@
 import { css, styled } from "styled-components";
 
 export interface StyledButtonProps {
-  variant?: "outline";
+  variant?: "primary" | "outline";
 }
 
 export const StyledButton = styled.button<StyledButtonProps>`
@@ -13,8 +13,12 @@ export const StyledButton = styled.button<StyledButtonProps>`
   font-size: 1rem;
   padding: var(--sm) var(--xl);
 
-  ${({ variant }) => {
+  ${({ variant = "primary" }) => {
     switch (variant) {
+      case "primary":
+        return css`
+          padding: var(--lg) calc(var(--xl) * 2);
+        `;
       case "outline":
         return css`
           background: transparent;
