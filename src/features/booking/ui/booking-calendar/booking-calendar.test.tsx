@@ -13,7 +13,7 @@ const mockUseUpdateCurrentBooking = useUpdateCurrrentBooking as MockedFunction<t
 describe("BookingCalendar", () => {
   const mockUpdateCurrentBooking = vi.fn();
 
-  const MOCK_NOW = new Date("2026-01-15T03:00:00.000Z");
+  const MOCK_NOW = new Date("2026-01-15T12:00:00.000Z");
 
   beforeEach(() => {
     vi.clearAllMocks();
@@ -51,24 +51,23 @@ describe("BookingCalendar", () => {
 
       render(<BookingCalendar />);
 
-      const tomorrow = new Date();
-      tomorrow.setDate(tomorrow.getDate() + 1);
-      tomorrow.setHours(0, 0, 0, 0);
+      const tomorrow = new Date("2026-01-16T12:00:00.000Z");
+      const expectedDate = startOfDay(tomorrow).toISOString();
 
       const dateButton = screen.getByRole("button", {
-        name: new RegExp(tomorrow.getDate().toString()),
+        name: "Friday, January 16th, 2026",
       });
 
       fireEvent.click(dateButton);
 
       expect(mockUpdateCurrentBooking).toHaveBeenCalledWith({
-        start_date: tomorrow.toISOString(),
+        start_date: expectedDate,
       });
     });
   });
 
   describe("when only start_date is selected", () => {
-    const startDate = startOfDay(new Date("2026-01-20")).toISOString();
+    const startDate = startOfDay(new Date("2026-01-20T12:00:00.000Z")).toISOString();
 
     beforeEach(() => {
       mockUseCurrentBooking.mockReturnValue({
@@ -80,9 +79,9 @@ describe("BookingCalendar", () => {
     test("should set end_date when clicking a later date", () => {
       render(<BookingCalendar />);
 
-      const laterDate = new Date("2026-01-25");
+      const laterDate = new Date("2026-01-25T12:00:00.000Z");
       const dateButton = screen.getByRole("button", {
-        name: new RegExp(laterDate.getDate().toString()),
+        name: "Sunday, January 25th, 2026",
       });
 
       fireEvent.click(dateButton);
@@ -95,10 +94,10 @@ describe("BookingCalendar", () => {
     test("should swap dates when clicking a date before start_date", () => {
       render(<BookingCalendar />);
 
-      const earlierDate = new Date("2026-01-18");
+      const earlierDate = new Date("2026-01-18T12:00:00.000Z");
 
       const dateButton = screen.getByRole("button", {
-        name: new RegExp(earlierDate.getDate().toString()),
+        name: "Sunday, January 18th, 2026",
       });
 
       fireEvent.click(dateButton);
@@ -117,9 +116,8 @@ describe("BookingCalendar", () => {
 
       const { rerender } = render(<BookingCalendar />);
 
-      const sameDate = new Date("2026-01-20");
       const dateButton = screen.getByRole("button", {
-        name: new RegExp(sameDate.getDate().toString()),
+        name: "Tuesday, January 20th, 2026",
       });
 
       fireEvent.click(dateButton);
@@ -138,8 +136,8 @@ describe("BookingCalendar", () => {
   });
 
   describe("when both start_date and end_date are selected", () => {
-    const startDate = startOfDay(new Date("2026-01-20")).toISOString();
-    const endDate = startOfDay(new Date("2026-01-25")).toISOString();
+    const startDate = startOfDay(new Date("2026-01-20T12:00:00.000Z")).toISOString();
+    const endDate = startOfDay(new Date("2026-01-25T12:00:00.000Z")).toISOString();
 
     beforeEach(() => {
       mockUseCurrentBooking.mockReturnValue({
@@ -151,9 +149,9 @@ describe("BookingCalendar", () => {
     test("should reset selection with new start_date when clicking any date", () => {
       render(<BookingCalendar />);
 
-      const newDate = new Date("2026-01-22");
+      const newDate = new Date("2026-01-22T12:00:00.000Z");
       const dateButton = screen.getByRole("button", {
-        name: new RegExp(newDate.getDate().toString()),
+        name: "Thursday, January 22nd, 2026, selected",
       });
 
       fireEvent.click(dateButton);
