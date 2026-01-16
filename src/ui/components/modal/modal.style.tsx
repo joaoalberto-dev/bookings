@@ -45,11 +45,11 @@ export const ModalClose = styled.button`
   cursor: pointer;
   display: flex;
   font-size: 1.4rem;
-  height: 44px;
+  height: 26px;
   justify-content: center;
   position: absolute;
   right: var(--md);
   top: var(--md);
-  width: 44px;
+  width: 26px;
   z-index: var(--z-modal);
 `;
