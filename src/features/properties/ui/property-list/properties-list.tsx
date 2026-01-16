@@ -16,8 +16,7 @@ export const PropertiesList = ({ onPropertySelect }: PropertiesListProps) => {
       {properties.map((property) => (
         <S.PropertyContainer
           key={property.id}
-          id=""
-          onPointerUp={() => {
+          onClick={() => {
             onPropertySelect(property);
           }}
         >
