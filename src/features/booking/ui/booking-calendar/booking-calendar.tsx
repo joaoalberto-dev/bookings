@@ -3,14 +3,17 @@ import "react-day-picker/style.css";
 import { useCallback } from "react";
 import { type DateRange, DayPicker, type OnSelectHandler } from "react-day-picker";
 
-import { stripTimezone } from "@/utils/dates";
+import { isDatesOverlapping, stripTimezone } from "@/utils/dates";
 
-import { useCurrentBooking, useUpdateCurrrentBooking } from "../../data/booking.store";
+import { useBookings, useCurrentBooking, useUpdateCurrrentBooking } from "../../data/booking.store";
+import { useDisabledDates } from "../../hooks/use-disabled-dates";
 import * as S from "./booking-calendar.style";
 
 export const BookingCalendar = () => {
+  const bookings = useBookings();
   const currentBooking = useCurrentBooking();
   const updateCurrentBooking = useUpdateCurrrentBooking();
+  const disabledDates = useDisabledDates(bookings, currentBooking?.property_id);
   const start = currentBooking?.start_date;
   const end = currentBooking?.end_date;
 
@@ -29,18 +32,32 @@ export const BookingCalendar = () => {
       }
 
       if (start && !end) {
-        if (newDate < start) {
-          updateCurrentBooking({ start_date: newDate, end_date: start });
-        } else if (newDate === start) {
+        if (newDate === start) return;
+
+        const candidateStart = newDate < start ? newDate : start;
+        const candidateEnd = newDate > start ? newDate : start;
+        const blocked = disabledDates.map(({ from, to }) => ({
+          from: stripTimezone(from),
+          to: stripTimezone(to),
+        }));
+
+        const hasOverlap = isDatesOverlapping(blocked, {
+          start: candidateStart,
+          end: candidateEnd,
+        });
+
+        if (hasOverlap) {
+          updateCurrentBooking({ start_date: newDate, end_date: undefined });
           return;
-        } else {
-          updateCurrentBooking({ end_date: newDate });
         }
 
-        return;
+        updateCurrentBooking({
+          start_date: candidateStart,
+          end_date: candidateEnd,
+        });
       }
     },
-    [start, end, updateCurrentBooking],
+    [start, end, updateCurrentBooking, disabledDates],
   );
 
   const before = new Date();
@@ -50,7 +67,8 @@ export const BookingCalendar = () => {
   return (
     <S.BookingCalendarContainer>
       <DayPicker
-        disabled={{ before }}
+        disabled={[{ before }, ...disabledDates]}
+        excludeDisabled
         min={2}
         mode="range"
         onSelect={onSelect}

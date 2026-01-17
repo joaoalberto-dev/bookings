@@ -36,3 +36,16 @@ export const formatDateRange = (start: string, end: string) => {
 
   return `${format(startDate, "MMM d, yyyy")} - ${format(endDate, "MMM d, yyyy")}`;
 };
+
+export const isDatesOverlapping = (
+  blockedDates: { from: string; to: string }[],
+  candidateDate: { start?: string; end?: string },
+) => {
+  const { start, end } = candidateDate;
+
+  if (!start || !end) {
+    return false;
+  }
+
+  return blockedDates.some((blocked) => start < blocked.to && end > blocked.from);
+};

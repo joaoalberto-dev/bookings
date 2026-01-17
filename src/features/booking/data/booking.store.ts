@@ -40,6 +40,7 @@ export const useCurrentBooking = () => useBookingStore((store) => store.currentB
 export const useCreateBooking = () => useBookingStore((store) => store.createBooking);
 export const useUpdateCurrrentBooking = () => useBookingStore((store) => store.updateCurrentBooking);
 export const useClearCurrentBooking = () => useBookingStore((store) => store.clearCurrentBooking);
+
 export const useBookingNights = () =>
   useBookingStore((store) => {
     const start = store.currentBooking?.start_date;
