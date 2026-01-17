@@ -76,7 +76,7 @@ describe("BookingModalFooter", () => {
     beforeEach(() => {
       vi.mocked(useCurrentBooking).mockReturnValue({
         property_id: "prop-1",
-        start_date: "2026-03-15T00:00:00.000Z",
+        start_date: "2026-03-15",
         end_date: undefined,
       });
       vi.mocked(useBookingNights).mockReturnValue(1);
@@ -93,8 +93,8 @@ describe("BookingModalFooter", () => {
     beforeEach(() => {
       vi.mocked(useCurrentBooking).mockReturnValue({
         property_id: "prop-1",
-        start_date: "2026-03-15T00:00:00.000Z",
-        end_date: "2026-03-20T00:00:00.000Z",
+        start_date: "2026-03-15",
+        end_date: "2026-03-20",
       });
       vi.mocked(useBookingNights).mockReturnValue(5);
     });
@@ -122,8 +122,8 @@ describe("BookingModalFooter", () => {
     test("formats cross-month date range correctly", () => {
       vi.mocked(useCurrentBooking).mockReturnValue({
         property_id: "prop-1",
-        start_date: "2026-03-28T00:00:00.000Z",
-        end_date: "2026-04-05T00:00:00.000Z",
+        start_date: "2026-03-28",
+        end_date: "2026-04-05",
       });
       vi.mocked(useBookingNights).mockReturnValue(8);
 
@@ -136,14 +136,14 @@ describe("BookingModalFooter", () => {
     test("formats cross-year date range correctly", () => {
       vi.mocked(useCurrentBooking).mockReturnValue({
         property_id: "prop-1",
-        start_date: "2026-12-28T00:00:00.000Z",
-        end_date: "2026-01-05T00:00:00.000Z",
+        start_date: "2025-12-28",
+        end_date: "2026-01-05",
       });
       vi.mocked(useBookingNights).mockReturnValue(8);
 
       render(<BookingModalFooter {...defaultProps} />);
 
-      expect(screen.getByText(/Dec 28, 2026 - Jan 5, 2026/)).toBeInTheDocument();
+      expect(screen.getByText(/Dec 28, 2025 - Jan 5, 2026/)).toBeInTheDocument();
     });
   });
 
@@ -181,8 +181,8 @@ describe("BookingModalFooter", () => {
     test("calculates total with BRL for multiple nights", () => {
       vi.mocked(useCurrentBooking).mockReturnValue({
         property_id: "prop-1",
-        start_date: "2026-06-01T00:00:00.000Z",
-        end_date: "2026-06-04T00:00:00.000Z",
+        start_date: "2026-06-01",
+        end_date: "2026-06-04",
       });
       vi.mocked(useBookingNights).mockReturnValue(3);
 
@@ -230,8 +230,8 @@ describe("BookingModalFooter", () => {
     test("calculates correctly for 1 night", () => {
       vi.mocked(useCurrentBooking).mockReturnValue({
         property_id: "prop-1",
-        start_date: "2026-03-15T00:00:00.000Z",
-        end_date: "2026-03-16T00:00:00.000Z",
+        start_date: "2026-03-15",
+        end_date: "2026-03-16",
       });
       vi.mocked(useBookingNights).mockReturnValue(1);
 
@@ -243,8 +243,8 @@ describe("BookingModalFooter", () => {
     test("calculates correctly for 7 nights", () => {
       vi.mocked(useCurrentBooking).mockReturnValue({
         property_id: "prop-1",
-        start_date: "2026-03-15T00:00:00.000Z",
-        end_date: "2026-03-22T00:00:00.000Z",
+        start_date: "2026-03-15",
+        end_date: "2026-03-22",
       });
       vi.mocked(useBookingNights).mockReturnValue(7);
 
@@ -256,8 +256,8 @@ describe("BookingModalFooter", () => {
     test("handles large amounts with proper formatting", () => {
       vi.mocked(useCurrentBooking).mockReturnValue({
         property_id: "prop-1",
-        start_date: "2026-03-01T00:00:00.000Z",
-        end_date: "2026-03-31T00:00:00.000Z",
+        start_date: "2026-03-01",
+        end_date: "2026-03-31",
       });
       vi.mocked(useBookingNights).mockReturnValue(30);
 
@@ -283,8 +283,8 @@ describe("BookingModalFooter", () => {
     test("updates when nights change", () => {
       vi.mocked(useCurrentBooking).mockReturnValue({
         property_id: "prop-1",
-        start_date: "2026-03-15T00:00:00.000Z",
-        end_date: "2026-03-17T00:00:00.000Z",
+        start_date: "2026-03-15",
+        end_date: "2026-03-17",
       });
       vi.mocked(useBookingNights).mockReturnValue(2);
 
@@ -294,8 +294,8 @@ describe("BookingModalFooter", () => {
 
       vi.mocked(useCurrentBooking).mockReturnValue({
         property_id: "prop-1",
-        start_date: "2026-03-15T00:00:00.000Z",
-        end_date: "2026-03-20T00:00:00.000Z",
+        start_date: "2026-03-15",
+        end_date: "2026-03-20",
       });
 
       vi.mocked(useBookingNights).mockReturnValue(5);

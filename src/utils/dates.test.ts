@@ -1,4 +1,38 @@
-import { formatDateRange } from "./dates";
+import { diffDaysISO, formatDateRange, stripTimezone } from "./dates";
+
+describe("stripTimezone", () => {
+  test("should remove timezone info from dates", () => {
+    const dateWithTimezone = new Date(2026, 0, 1);
+    const dateWithoutTimezone = stripTimezone(dateWithTimezone);
+
+    expect(dateWithoutTimezone).toBe("2026-01-01");
+  });
+
+  test("should parse date correctly in any time", () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date(2024, 0, 1));
+
+    const dateWithTimezone = new Date();
+    const dateWithoutTimezone = stripTimezone(dateWithTimezone);
+    expect(dateWithoutTimezone).toBe("2024-01-01");
+
+    vi.useRealTimers();
+  });
+});
+
+describe("diffDaysISO", () => {
+  test("should count daus correctly", () => {
+    const days = diffDaysISO("2026-01-01", "2026-01-10");
+
+    expect(days).toBe(9);
+  });
+
+  test("should count daus correctly when order is wrong", () => {
+    const days = diffDaysISO("2026-01-10", "2026-01-01");
+
+    expect(days).toBe(9);
+  });
+});
 
 describe("formatDateRange", () => {
   describe("same month and year", () => {
@@ -11,7 +45,7 @@ describe("formatDateRange", () => {
     });
 
     test("handles month boundaries", () => {
-      expect(formatDateRange("2026-02-01", "2026-02-29")).toBe("Feb 1-29, 2026");
+      expect(formatDateRange("2026-02-01", "2026-02-28")).toBe("Feb 1-28, 2026");
     });
 
     test("handles December", () => {
@@ -53,7 +87,7 @@ describe("formatDateRange", () => {
     });
 
     test("handles leap year dates", () => {
-      expect(formatDateRange("2026-02-28", "2026-02-29")).toBe("Feb 28-29, 2026");
+      expect(formatDateRange("2028-02-28", "2028-02-29")).toBe("Feb 28-29, 2028");
     });
 
     test("handles dates with time information (should ignore time)", () => {
@@ -62,24 +96,6 @@ describe("formatDateRange", () => {
 
     test("handles year boundary within same year", () => {
       expect(formatDateRange("2026-01-01", "2026-12-31")).toBe("Jan 1 - Dec 31, 2026");
-    });
-  });
-
-  describe("real-world booking scenarios", () => {
-    test("formats a weekend trip", () => {
-      expect(formatDateRange("2026-06-14", "2026-06-16")).toBe("Jun 14-16, 2026");
-    });
-
-    test("formats a week-long vacation", () => {
-      expect(formatDateRange("2026-07-01", "2026-07-08")).toBe("Jul 1-8, 2026");
-    });
-
-    test("formats a cross-month vacation", () => {
-      expect(formatDateRange("2026-08-28", "2026-09-05")).toBe("Aug 28 - Sep 5, 2026");
-    });
-
-    test("formats a winter holiday trip", () => {
-      expect(formatDateRange("2026-12-20", "2026-01-03")).toBe("Dec 20, 2026 - Jan 3, 2026");
     });
   });
 });

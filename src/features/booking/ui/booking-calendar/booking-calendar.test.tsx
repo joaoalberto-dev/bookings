@@ -1,6 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { startOfDay } from "date-fns";
 import type { MockedFunction } from "vitest";
+
+import { stripTimezone } from "@/utils/dates";
 
 import { useCurrentBooking, useUpdateCurrrentBooking } from "../../data/booking.store";
 import { BookingCalendar } from "./booking-calendar";
@@ -52,7 +53,7 @@ describe("BookingCalendar", () => {
       render(<BookingCalendar />);
 
       const tomorrow = new Date("2026-01-16T12:00:00.000Z");
-      const expectedDate = startOfDay(tomorrow).toISOString();
+      const expectedDate = stripTimezone(tomorrow);
 
       const dateButton = screen.getByRole("button", {
         name: "Friday, January 16th, 2026",
@@ -67,7 +68,7 @@ describe("BookingCalendar", () => {
   });
 
   describe("when only start_date is selected", () => {
-    const startDate = startOfDay(new Date("2026-01-20T12:00:00.000Z")).toISOString();
+    const startDate = stripTimezone(new Date("2026-01-20T12:00:00.000Z"));
 
     beforeEach(() => {
       mockUseCurrentBooking.mockReturnValue({
@@ -79,7 +80,7 @@ describe("BookingCalendar", () => {
     test("should set end_date when clicking a later date", () => {
       render(<BookingCalendar />);
 
-      const laterDate = new Date("2026-01-25T12:00:00.000Z");
+      const laterDate = stripTimezone(new Date("2026-01-25T12:00:00.000Z"));
       const dateButton = screen.getByRole("button", {
         name: "Sunday, January 25th, 2026",
       });
@@ -87,7 +88,7 @@ describe("BookingCalendar", () => {
       fireEvent.click(dateButton);
 
       expect(mockUpdateCurrentBooking).toHaveBeenCalledWith({
-        end_date: startOfDay(laterDate).toISOString(),
+        end_date: laterDate,
       });
     });
 
@@ -103,7 +104,7 @@ describe("BookingCalendar", () => {
       fireEvent.click(dateButton);
 
       expect(mockUpdateCurrentBooking).toHaveBeenCalledWith({
-        start_date: startOfDay(earlierDate).toISOString(),
+        start_date: stripTimezone(earlierDate),
         end_date: startDate,
       });
     });
@@ -136,8 +137,8 @@ describe("BookingCalendar", () => {
   });
 
   describe("when both start_date and end_date are selected", () => {
-    const startDate = startOfDay(new Date("2026-01-20T12:00:00.000Z")).toISOString();
-    const endDate = startOfDay(new Date("2026-01-25T12:00:00.000Z")).toISOString();
+    const startDate = stripTimezone(new Date("2026-01-20T12:00:00.000Z"));
+    const endDate = stripTimezone(new Date("2026-01-25T12:00:00.000Z"));
 
     beforeEach(() => {
       mockUseCurrentBooking.mockReturnValue({
@@ -157,7 +158,7 @@ describe("BookingCalendar", () => {
       fireEvent.click(dateButton);
 
       expect(mockUpdateCurrentBooking).toHaveBeenCalledWith({
-        start_date: startOfDay(newDate).toISOString(),
+        start_date: stripTimezone(newDate),
         end_date: undefined,
       });
     });

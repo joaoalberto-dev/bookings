@@ -1,5 +1,6 @@
-import { differenceInDays, parseISO } from "date-fns";
 import { create } from "zustand";
+
+import { diffDaysISO } from "@/utils/dates";
 
 import { type Booking } from "./booking.types";
 
@@ -46,5 +47,5 @@ export const useBookingNights = () =>
 
     if (!start || !end) return 1;
 
-    return differenceInDays(parseISO(end), parseISO(start));
+    return diffDaysISO(end, start);
   });
