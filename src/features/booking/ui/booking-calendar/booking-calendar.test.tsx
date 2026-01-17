@@ -89,6 +89,7 @@ describe("BookingCalendar", () => {
 
       expect(mockUpdateCurrentBooking).toHaveBeenCalledWith({
         end_date: laterDate,
+        start_date: "2026-01-20",
       });
     });
 
